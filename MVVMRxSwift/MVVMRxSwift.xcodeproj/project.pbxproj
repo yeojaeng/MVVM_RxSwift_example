@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B0F16725261A73002E0F44 /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0F16625261A73002E0F44 /* RestaurantViewModel.swift */; };
 		04F792EC25260C7A00246C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F792EB25260C7A00246C62 /* AppDelegate.swift */; };
 		04F792EE25260C7A00246C62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F792ED25260C7A00246C62 /* SceneDelegate.swift */; };
 		04F792F025260C7A00246C62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F792EF25260C7A00246C62 /* ViewController.swift */; };
@@ -17,10 +18,12 @@
 		04F7930A2526102500246C62 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 04F793092526102500246C62 /* restaurants.json */; };
 		04F7930D252610B900246C62 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7930C252610B900246C62 /* Restaurant.swift */; };
 		04F793102526113B00246C62 /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7930F2526113B00246C62 /* RestaurantService.swift */; };
+		04F793192526192300246C62 /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F793182526192300246C62 /* RestaurantListViewModel.swift */; };
 		48767C1C1B746603DFE144A8 /* Pods_MVVMRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED8D8A69ED2C5D03B78B419 /* Pods_MVVMRxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B0F16625261A73002E0F44 /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 		04F792E825260C7A00246C62 /* MVVMRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F792EB25260C7A00246C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F792ED25260C7A00246C62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		04F793092526102500246C62 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
 		04F7930C252610B900246C62 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		04F7930F2526113B00246C62 /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		04F793182526192300246C62 /* RestaurantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModel.swift; sourceTree = "<group>"; };
 		3BD58C592F389928CDEC92B8 /* Pods-MVVMRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwift.release.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwift/Pods-MVVMRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		3E2A5F3E3F774E9F544D5291 /* Pods-MVVMRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwift/Pods-MVVMRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		5ED8D8A69ED2C5D03B78B419 /* Pods_MVVMRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,9 +75,9 @@
 		04F792EA25260C7A00246C62 /* MVVMRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				04F7931B2526192800246C62 /* ViewModel */,
 				04F79316252616BC00246C62 /* ViewController */,
 				04F79315252616AE00246C62 /* Coordinator */,
-				04F79314252616A200246C62 /* Data */,
 				04F793132526169D00246C62 /* Service */,
 				04F793122526169800246C62 /* Model */,
 				04F792EB25260C7A00246C62 /* AppDelegate.swift */,
@@ -82,6 +86,7 @@
 				04F792F425260C7B00246C62 /* Assets.xcassets */,
 				04F792F625260C7B00246C62 /* LaunchScreen.storyboard */,
 				04F792F925260C7B00246C62 /* Info.plist */,
+				04F79314252616A200246C62 /* Data */,
 			);
 			path = MVVMRxSwift;
 			sourceTree = "<group>";
@@ -124,6 +129,15 @@
 				04F792EF25260C7A00246C62 /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04F7931B2526192800246C62 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04F793182526192300246C62 /* RestaurantListViewModel.swift */,
+				04B0F16625261A73002E0F44 /* RestaurantViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1BACDB75F42A41E38CA65B5B /* Frameworks */ = {
@@ -259,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F7930D252610B900246C62 /* Restaurant.swift in Sources */,
+				04B0F16725261A73002E0F44 /* RestaurantViewModel.swift in Sources */,
 				04F7930725260D2B00246C62 /* AppCoordinator.swift in Sources */,
+				04F793192526192300246C62 /* RestaurantListViewModel.swift in Sources */,
 				04F792F025260C7A00246C62 /* ViewController.swift in Sources */,
 				04F792EC25260C7A00246C62 /* AppDelegate.swift in Sources */,
 				04F793102526113B00246C62 /* RestaurantService.swift in Sources */,

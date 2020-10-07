@@ -8,8 +8,15 @@
 import Foundation
 import RxSwift
 
-class RestaurantService {
+// Service Protocol
+protocol RestaurantServiceProtocol {
+    func fetchRestaurants() -> Observable<[Restaurant]>
+}
 
+
+class RestaurantService: RestaurantServiceProtocol {
+    
+    /// restaurants.json 파일로 부터 데이터를 읽어와서 Observable<[Restaurant]> 반환
     func fetchRestaurants() -> Observable<[Restaurant]> {
 
         return Observable.create { observer -> Disposable in

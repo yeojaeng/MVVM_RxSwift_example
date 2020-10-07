@@ -18,8 +18,9 @@ class AppCoordinator {
         self.window = window
     }
     
+    /// initial View를 가져와서 해당 뷰를 root로 하는 네비게이션 컨트롤러 생성
     func start() {
-        let viewController = ViewController.instatinate()
+        let viewController = ViewController.instatinate(viewModel: RestaurantListViewModel())
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
