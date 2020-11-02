@@ -6,22 +6,27 @@
 //
 
 import Foundation
+
 import RxSwift
 import RxCocoa
 
 
-// ViewModel: ViewController
+// ViewModel for ViewController
 class LoginViewModel {
-    let emailTextRelay = BehaviorRelay<String>(value: "")
-    let pwTextRelay = BehaviorRelay<String>(value: "")
 
+    // MARK: - Properties
+
+    let emailTextRelay: BehaviorRelay = BehaviorRelay(value: "")
+    let pwTextRelay: BehaviorRelay = BehaviorRelay(value: "")
+
+    // MARK: - Methods
+
+
+    /// Check Input validation
+    /// - Returns: bool type Observable
     func isValid() -> Observable<Bool> {
         return Observable.combineLatest(emailTextRelay, pwTextRelay).map { username, password in
-            return username.count > 0 && username.contains("@") && username.contains(".") && password.count > 0
+            return username.count > 0 && username.contains("@") && username.contains(".") && password.count > 6
         }
-//        return Observable.combineLatest(emailTextRelay,
-//            pwTextRelay).map { username, password in
-//                return username.count > 0 && username.contains("@") && username.contains(".") && password.count > 0
-//        }
     }
 }
